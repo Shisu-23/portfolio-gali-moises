@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../api/axios";
+import Swal from "sweetalert2";
 
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
@@ -14,9 +15,6 @@ const RegisterPage = () => {
   const [terms, setTerms] = useState(false);
 
   const navigate = useNavigate();
-
-  // Popup state
-  const [popupVisible, setPopupVisible] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -53,39 +51,20 @@ const RegisterPage = () => {
       localStorage.setItem("user", JSON.stringify(data.user));
 
       // ✅ show popup
-      setPopupVisible(true);
+      Swal.fire({
+        title: "Success!",
+        text: "Registered Successfully!",
+        icon: "success",
+        showConfirmButton: false,
+      });
+      navigate("/login");
     } catch (err) {
       alert(err.response?.data?.message || "Registration failed.");
     }
   };
 
-  const closePopup = () => {
-    setPopupVisible(false);
-
-    setUsername("");
-    setEmail("");
-    setPassword("");
-    setConfirmPassword("");
-    setTerms(false);
-
-    navigate("/home"); // redirect after register
-  };
-
   return (
     <div>
-      {/* SUCCESS POPUP */}
-      {popupVisible && (
-        <div id="successPopup" className="popup">
-          <div className="popup-content">
-            <h2>🎉 Congrats!</h2>
-            <p>You are already registered</p>
-            <button id="closePopup" className="btn-1" onClick={closePopup}>
-              OK
-            </button>
-          </div>
-        </div>
-      )}
-
       <Navbar />
 
       <section className="home register-page">
