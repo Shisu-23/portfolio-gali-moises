@@ -22,7 +22,10 @@ connectDB(); // Connect to MongoDB
 // Allow React (port 3000) to call this server
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://portfolio-gali-moises.vercel.app",
+    ],
     credentials: true,
   }),
 );
