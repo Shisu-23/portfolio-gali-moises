@@ -1,0 +1,127 @@
+/* ================= PAGE CONTAINER ================= */
+.edit-post-page {
+  max-width: 750px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* TITLE */
+.edit-post-page h2 {
+  text-align: center;
+  color: orangered;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+/* ERROR */
+.error-msg {
+  background: #ffe6e6;
+  color: red;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* ================= CURRENT IMAGE ================= */
+.current-image {
+  background: #fafafa;
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.current-image p {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.current-image img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid orangered;
+}
+
+/* ================= FORM ================= */
+.edit-post-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* INPUTS */
+.edit-post-page input,
+.edit-post-page textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: 0.3s;
+  background: #fff;
+}
+
+/* focus */
+.edit-post-page input:focus,
+.edit-post-page textarea:focus {
+  border-color: orangered;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 69, 0, 0.15);
+}
+
+/* textarea */
+.edit-post-page textarea {
+  resize: vertical;
+  min-height: 180px;
+  line-height: 1.6;
+}
+
+/* label */
+.edit-post-page label {
+  font-size: 13px;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* file input */
+.edit-post-page input[type="file"] {
+  border: none;
+  padding: 5px 0;
+}
+
+/* ================= BUTTON ================= */
+.edit-post-page button {
+  margin-top: 10px;
+  padding: 12px;
+  background: orangered;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+  box-shadow: 0 6px 15px rgba(255, 69, 0, 0.25);
+}
+
+/* hover */
+.edit-post-page button:hover {
+  background: #cc3700;
+  transform: translateY(-1px);
+}
+
+/* loading text */
+.edit-post-page p {
+  text-align: center;
+  color: #666;
+}

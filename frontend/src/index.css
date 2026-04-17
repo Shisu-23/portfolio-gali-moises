@@ -1,0 +1,494 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 35px 12%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.logo {
+  font-size: 25px;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+.logo:hover {
+  color: orangered;
+  text-shadow:
+    0 0 25px orangered,
+    0 0 50px orangered;
+  transform: scale(1.1);
+}
+span {
+  color: orangered;
+}
+.navbar a {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  margin: 0 20px;
+  border-bottom: 3px solid transparent;
+  transition: 0.3 ease;
+}
+.navbar a:hover,
+.navbar a:active {
+  color: orangered;
+  border-bottom: 3px solid orangered;
+}
+.home {
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(241, 241, 241);
+  display: flex;
+  align-items: center;
+  gap: 7em;
+  padding: 30px 12% 0;
+}
+.home a {
+  font-size: 25px;
+}
+.home-content {
+  max-width: 800px;
+}
+.home-content h3 {
+  font-size: 42px;
+}
+.home-content h1 {
+  font-size: 62px;
+  line-height: 1.2;
+}
+.home-content p {
+  font-size: 18px;
+  margin: 2px 0 30px;
+}
+home-content2 {
+  max-width: 900px;
+}
+.home-content2 h3 {
+  font-size: 65px;
+}
+
+.home-content2 ul {
+  font-size: 25px;
+  margin: 2px 0 30px;
+}
+home-content3 {
+  max-width: 900px;
+}
+.home-content3 h2 {
+  font-size: 65px;
+}
+.home-content3 p {
+  font-size: 25px;
+  margin: 2px 0 30px;
+}
+
+.home-content3 ol {
+  font-size: 25px;
+  margin: 2px 0 30px;
+}
+.coding img {
+  position: relative;
+  align-self: center;
+  width: 550px;
+  box-shadow:
+    0 0 25px orangered,
+    0 0 25px orangered;
+  border-radius: 20px;
+}
+.program img {
+  position: relative;
+  width: 550px;
+  box-shadow:
+    0 0 25px orangered,
+    0 0 25px orangered;
+  border-radius: 20px;
+}
+blockquote {
+  text-align: 50px;
+  font-size: 20px;
+}
+home-content4 {
+  max-width: 900px;
+}
+.home-content4 h2 {
+  font-size: 65px;
+}
+.home-content a {
+  font-size: 25px;
+  margin: 2px 0 30px;
+}
+.contact-nec img {
+  box-shadow:
+    0 0 25px 5px orangered,
+    0 0 25px 5px orangered;
+  position: relative;
+  align-self: center;
+  width: 100%;
+  height: 100%;
+}
+.contact-nec {
+  overflow: hidden;
+  width: 400px;
+  height: 400px;
+  border-radius: 20px;
+}
+table {
+  height: 400px;
+  width: 100%;
+}
+
+.img-box img {
+  border-radius: 20px;
+  width: 500px;
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-top: 3em;
+  font-size: 36px;
+}
+.contact-form form {
+  max-width: 50em;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3em;
+}
+.contact-form form .input-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.contact-form form .input-box input,
+.contact-form form textarea {
+  width: 100%;
+  padding: 1.5em;
+  font-size: 18px;
+  color: black;
+  background: rgb(241, 241, 241);
+  border-radius: 0.8rem;
+  margin: 1rem 0;
+  resize: none;
+}
+
+.register-form h2 {
+  text-align: center;
+  margin-top: 3em;
+  font-size: 36px;
+}
+.register-form form {
+  max-width: 50em;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3em;
+}
+.register-form form .input-box2 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.register-form form .input-box2 input,
+.register-form form radio {
+  width: 100%;
+  padding: 1.5em;
+  font-size: 18px;
+  color: black;
+  background: rgb(241, 241, 241);
+  border-radius: 0.8rem;
+  margin: 1rem 0;
+  resize: none;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 40px 0;
+  background-color: black;
+}
+.footer .social {
+  text-align: center;
+  padding-bottom: 25px;
+  color: white;
+}
+.footer .social a {
+  font-size: 24px;
+  color: white;
+  border: 2px solid orangered;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 8px;
+  box-shadow:
+    inset 0 0 10px orangered,
+    0 0 10px orangered;
+  transition: 0.3s ease;
+}
+.footer .social a:hover {
+  transform: scale(1.2) translateY(-10px);
+  color: orangered;
+  border: 2px solid orangered;
+}
+.footer ul {
+  margin-top: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+}
+.footer ul li a {
+  color: white;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease;
+}
+.footer ul li a:hover {
+  border-bottom: 3px solid orangered;
+}
+.footer ul li {
+  display: inline-block;
+  padding: 0 15px;
+}
+.footer p {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+}
+
+/* ===== IMAGE SLIDER ===== */
+.slider-container {
+  width: 450px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 0 25px orangered;
+  margin: auto;
+}
+
+.slider-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.slider-container img.active {
+  display: block;
+}
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* POPUP */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 99999;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: #111;
+  color: #00ff88;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  width: 300px;
+  animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* ================= POSTS SECTION ================= */
+.posts-section {
+  padding: 60px 20px;
+  background: #ffffff;
+}
+
+.posts-section h2 {
+  text-align: center;
+  font-size: 28px;
+  color: orangered;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* GRID */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* ================= POST CARD (FB STYLE) ================= */
+.post-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* IMAGE */
+.post-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* TITLE */
+.post-card h3 {
+  font-size: 18px;
+  margin: 12px 15px 5px;
+}
+
+.post-card h3 a {
+  text-decoration: none;
+  color: orangered;
+  transition: 0.3s;
+}
+
+.post-card h3 a:hover {
+  color: #cc3700;
+}
+
+/* BODY PREVIEW */
+.post-card p {
+  font-size: 14px;
+  color: #444;
+  padding: 0 15px;
+  line-height: 1.5;
+}
+
+/* META */
+.post-card small {
+  padding: 10px 15px;
+  color: #888;
+  font-size: 12px;
+}
+
+/* ================= ACTION BUTTONS ================= */
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 15px 15px;
+}
+
+.post-actions button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.3s;
+  background: #f2f2f2;
+  color: #333;
+}
+
+.post-actions button:hover {
+  background: orangered;
+  color: white;
+}
+
+/* ================= CREATE POST BUTTON ================= */
+.btn-1 {
+  display: block;
+  margin: 30px auto 0;
+  padding: 12px 22px;
+  background: orangered;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 6px 15px rgba(255, 69, 0, 0.25);
+}
+
+.btn-1:hover {
+  background: #cc3700;
+  transform: translateY(-2px);
+}
+/* ================= LIKE BUTTON ================= */
+.like-btn {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  background: #f2f2f2;
+  color: #333;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* hover */
+.like-btn:hover {
+  background: orangered;
+  color: white;
+  transform: scale(1.03);
+}
+
+/* heart animation */
+.like-btn:active {
+  animation: heartPop 0.4s ease;
+}
+
+/* animation keyframes */
+@keyframes heartPop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

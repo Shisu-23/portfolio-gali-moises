@@ -1,0 +1,119 @@
+/* Page background */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Title */
+.login-page h2 {
+  color: orangered;
+  margin-bottom: 20px;
+}
+
+/* Form container */
+.login-page form {
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Inputs */
+.login-page input[type="email"],
+.login-page input[type="password"],
+.login-page input[type="text"] {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* Focus effect */
+.login-page input:focus {
+  border-color: orangered;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 69, 0, 0.15);
+}
+
+/* Password container fix (para sa eye icon) */
+.login-page form div {
+  position: relative;
+}
+
+/* Eye icon */
+.login-page form div span {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Checkbox */
+.login-page label {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Button */
+.login-page button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: orangered;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Button hover */
+.login-page button:hover {
+  background: #cc3700;
+}
+
+/* Disabled button */
+.login-page button:disabled {
+  background: #ffb199;
+  cursor: not-allowed;
+}
+
+/* Error message */
+.error-msg {
+  background: #ffe6e6;
+  color: red;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Register link */
+.login-page p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.login-page a {
+  color: orangered;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-page a:hover {
+  text-decoration: underline;
+}

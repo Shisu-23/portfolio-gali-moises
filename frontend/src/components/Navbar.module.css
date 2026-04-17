@@ -1,0 +1,40 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 10%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 25px;
+  color: white;
+  font-weight: 600;
+}
+
+.logo span {
+  color: orangered;
+}
+
+.navbar a {
+  font-size: 18px;
+  color: white;
+  margin: 0 20px;
+  border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+  color: orangered;
+  border-bottom: 3px solid orangered;
+}
+
+.themeToggle {
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
