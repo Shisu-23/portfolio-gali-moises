@@ -66,12 +66,7 @@ function HomePage() {
         <div className="posts-grid">
           {posts.map((post) => (
             <div key={post._id} className="post-card">
-              {post.image && (
-                <img
-                  src={`http://localhost:5000/uploads/${post.image}`}
-                  alt={post.title}
-                />
-              )}
+              {post.image && <img src={`${post.image}`} alt={post.title} />}
 
               <h3>
                 <Link to={`/posts/${post._id}`}>{post.title}</Link>

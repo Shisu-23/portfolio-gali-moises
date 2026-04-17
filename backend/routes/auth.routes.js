@@ -4,6 +4,7 @@ const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 const { protect } = require("../middleware/auth.middleware");
 const upload = require("../middleware/upload");
+const { uploadImage } = require("../lib/cloudinary");
 
 const router = express.Router();
 
@@ -109,7 +110,8 @@ router.put(
       }
 
       if (req.file) {
-        user.profilePic = req.file.filename;
+        const result = await uploadImage(req.file);
+        user.profilePic = result.secure_url;
       }
 
       await user.save();

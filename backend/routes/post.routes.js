@@ -4,6 +4,8 @@ const Post = require("../models/Post");
 const { protect } = require("../middleware/auth.middleware");
 const { memberOrAdmin } = require("../middleware/role.middleware");
 const upload = require("../middleware/upload");
+const cloudinary = require("cloudinary").v2;
+const { uploadImage } = require("../lib/cloudinary");
 
 const router = express.Router();
 
@@ -48,12 +50,22 @@ router.post(
   async (req, res) => {
     try {
       const { title, body } = req.body;
-      const image = req.file ? req.file.filename : "";
+
+      let imageUrl = "";
+      let publicId = "";
+
+      if (req.file) {
+        const result = await uploadImage(req.file);
+
+        imageUrl = result.secure_url;
+        publicId = result.public_id;
+      }
 
       const post = await Post.create({
         title,
         body,
-        image,
+        image: imageUrl,
+        imagePublicId: publicId,
         author: req.user._id,
       });
 
@@ -61,12 +73,12 @@ router.post(
 
       res.status(201).json(post);
     } catch (err) {
+      console.error("Error", err);
       res.status(500).json({ message: err.message });
     }
   },
 );
 
-// PUT /api/posts/:id — Edit: only post owner OR admin
 router.put(
   "/:id",
   protect,
@@ -87,16 +99,18 @@ router.put(
         return res.status(403).json({ message: "Not authorized" });
       }
 
-      if (req.body.title) {
-        post.title = req.body.title;
-      }
-
-      if (req.body.body) {
-        post.body = req.body.body;
-      }
+      if (req.body.title) post.title = req.body.title;
+      if (req.body.body) post.body = req.body.body;
 
       if (req.file) {
-        post.image = req.file.filename;
+        if (post.imagePublicId) {
+          await cloudinary.uploader.destroy(post.imagePublicId);
+        }
+
+        const result = await uploadImage(req.file);
+
+        post.image = result.secure_url;
+        post.imagePublicId = result.public_id;
       }
 
       await post.save();

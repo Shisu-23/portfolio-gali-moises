@@ -89,11 +89,7 @@ const PostPage = () => {
       <br />
       <br />
       {post.image && (
-        <img
-          src={`http://localhost:5000/uploads/${post.image}`}
-          alt={post.title}
-          className="post-image"
-        />
+        <img src={`${post.image}`} alt={post.title} className="post-image" />
       )}
 
       <br />

@@ -10,6 +10,7 @@ const CreatePostPage = () => {
   const [body, setBody] = useState("");
   const [image, setImage] = useState(null);
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -17,6 +18,7 @@ const CreatePostPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
+    setIsLoading(true);
 
     const fd = new FormData();
     fd.append("title", title);
@@ -29,6 +31,7 @@ const CreatePostPage = () => {
       navigate(`/posts/${data._id}`);
     } catch (err) {
       setError(err.response?.data?.message || "Failed to publish post");
+      setIsLoading(false);
     }
   };
 
@@ -77,7 +80,9 @@ const CreatePostPage = () => {
           </div>
         )}
 
-        <button type="submit">Publish Post</button>
+        <button type="submit">
+          {isLoading ? "Uploading Post..." : "Publish Post"}
+        </button>
       </form>
     </div>
   );
